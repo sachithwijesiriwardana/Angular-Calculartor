@@ -11,13 +11,4 @@ import { InvestmentOutputsComponent } from './investment-outputs/investment-outp
   templateUrl: './app.component.html',
   imports: [HeaderComponent, UserInputComponent, InvestmentOutputsComponent],
 })
-export class AppComponent {
-  resultsData?: {
-    year: number;
-    interest: number;
-    valueEndOfYear: number;
-    annualInvestment: number;
-    totalInterest: number;
-    totalAmountInvested: number;
-  }[];
-}
+export class AppComponent {}
