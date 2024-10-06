@@ -5,8 +5,7 @@ import { InvestmentService } from '../investment-outputs/investment.service';
 
 @Component({
   selector: 'app-user-input',
-  standalone: true,
-  imports: [FormsModule],
+
   templateUrl: './user-input.component.html',
   styleUrl: './user-input.component.css',
 })

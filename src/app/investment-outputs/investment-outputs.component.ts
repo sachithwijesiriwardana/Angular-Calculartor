@@ -1,20 +1,17 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { InvestmentService } from './investment.service';
 
 @Component({
   selector: 'app-investment-outputs',
-  standalone: true,
-  imports: [CurrencyPipe],
+
   templateUrl: './investment-outputs.component.html',
   styleUrl: './investment-outputs.component.css',
 })
 export class InvestmentOutputsComponent {
-  @Input() results?: {
-    year: number;
-    interest: number;
-    valueEndOfYear: number;
-    annualInvestment: number;
-    totalInterest: number;
-    totalAmountInvested: number;
-  }[];
+  private investmentService = inject(InvestmentService);
+
+  get results() {
+    return this.investmentService.resultData;
+  }
 }
